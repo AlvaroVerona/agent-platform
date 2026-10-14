@@ -1,0 +1,39 @@
+[project]
+name = "agent-platform"
+version = "0.1.0"
+description = "Pipeline multi-agente (PM -> Arquitecto -> QA) que convierte una idea en una spec técnica validada, sobre Ollama local"
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Alvaro Verona" }]
+keywords = ["llm", "agents", "ollama", "mcp", "structured-outputs"]
+dependencies = [
+    "ollama",
+    "sqlalchemy>=2.0",
+    "pydantic>=2.0",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+mcp = [
+    "mcp>=1.2",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["src/tests"]
+
+[project.urls]
+Repository = "https://github.com/AlvaroVerona/agent-platform"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["src/agent_platform.egg-info"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+ignore = ["E501"]

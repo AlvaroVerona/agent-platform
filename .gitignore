@@ -1,0 +1,72 @@
+# =========================
+# ENVIRONMENT
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Virtual env
+venv/
+.venv/
+
+# =========================
+# TEST / CACHE
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# DATABASE
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL local artifacts (IMPORTANT)
+pgdata/
+*.pid
+*.lock
+*.sql
+
+# =========================
+# LOGS
+# =========================
+logs/
+*.log
+
+# =========================
+# MAC / OS
+# =========================
+.DS_Store
+
+# =========================
+# IDE / CURSOR
+# =========================
+.cursor/
+.vscode/
+.idea/
+
+# =========================
+# AGENT OUTPUTS (MUY IMPORTANTE EN TU PROYECTO)
+# =========================
+outputs/
+runs/
+artifacts/
+debug/
+
+# LLM dumps / traces
+*.jsonl
+*.trace*
+*.egg-info/
